@@ -59,7 +59,7 @@ public class Main {
         return new int[] {left,right};
     }
 
-    public static int leftSearch(int arr[],int target){
+    private static int leftSearch(int arr[],int target){
         int left=0;
         int right=arr.length-1;
         int result=-1;
@@ -79,7 +79,7 @@ public class Main {
         return result;
     }
 
-    public static int rightSearch(int arr[],int target){
+    private static int rightSearch(int arr[],int target){
         int left=0;
         int right=arr.length-1;
         int result=-1;
@@ -141,7 +141,7 @@ public class Main {
         return (result!=-1) ? result : DescBS(mountainArr,target,peakIdx+1,mountainArr.length()-1);
     }
 
-    public static int AscBS(MountainArray mountainArr,int target,int start,int end){
+    private static int AscBS(MountainArray mountainArr,int target,int start,int end){
 
         if(start>end) return -1;
 
@@ -155,7 +155,7 @@ public class Main {
 
     }
 
-    public static int DescBS(MountainArray mountainArr,int target,int start,int end){
+    private static int DescBS(MountainArray mountainArr,int target,int start,int end){
 
         if(start>end) return -1;
 
@@ -169,7 +169,7 @@ public class Main {
 
     }
 
-    public static int getPeak(MountainArray mountainArr){
+    private static int getPeak(MountainArray mountainArr){
         int start=0;
         int end=mountainArr.length()-1;
 
@@ -193,7 +193,7 @@ public class Main {
         return (result!=-1) ? result : bs(nums,target,pivot+1,nums.length-1);
     }
 
-    public static int getPivot(int nums[],int start,int end){
+    private static int getPivot(int nums[],int start,int end){
 
         if(start>end) return 0;
 
@@ -209,7 +209,7 @@ public class Main {
 
     }
 
-    public static int bs(int nums[],int target,int start,int end){
+    private static int bs(int nums[],int target,int start,int end){
 
         if(start>end) return -1;
 
@@ -272,3 +272,4 @@ public class Main {
 
     }
 }
+
