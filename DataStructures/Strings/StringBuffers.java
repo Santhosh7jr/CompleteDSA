@@ -44,7 +44,7 @@ public class StringBuffers {
 
     }
 
-    private static String generateRandomStr(){
+    public static String generateRandomStr(){
 
         StringBuffer sb = new StringBuffer();
         Random random = new Random();
@@ -59,3 +59,4 @@ public class StringBuffers {
     }
 
 }
+
