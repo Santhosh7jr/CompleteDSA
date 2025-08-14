@@ -39,9 +39,6 @@ public class StringBuffers {
         String arr = "this is an array";
         System.out.println(Arrays.toString(arr.split(" ")));
 
-        System.out.println(" ಶುಭಾಶಯಗಳು ಮತ್ತು ಸಭ್ಯ ಅಭಿವ್ಯಕ್ತಿಗಳು · 2. ದೈನಂದಿನ ಸಂಭಾಷಣೆ ನುಡಿಗಟ್ಟುಗಳು · 3. ಪಟ್ಟಣವನ್ನು ಸುತ್ತುವುದು · 4. ಆಹಾರ ಮತ್ತು ಊಟದ ನುಡಿಗಟ್ಟುಗಳು");
-
-
     }
 
     public static String generateRandomStr(){
@@ -59,4 +56,5 @@ public class StringBuffers {
     }
 
 }
+
 
