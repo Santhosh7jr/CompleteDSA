@@ -30,10 +30,6 @@ All topics are organized into separate folders for easy navigation.
 - **Backtracking** – Recursive and backtracking problems  
 - **Dynamic Programming** – Classic DP problems  
 - **Bit Manipulation** – Problems using bitwise operations  
-- **Templates**
-  - FastIO.java
-  - SolutionTemplate.java
-
 ---
 
 Each folder contains Java files with implementations and example problems.
