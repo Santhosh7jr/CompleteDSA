@@ -32,6 +32,8 @@ public class Main {
             if (freqTable[idx] == 0) stack.push(idx);
         }
 
+        if (stack.isEmpty() && !list.isEmpty()) return true;
+
         while (! stack.isEmpty()) {
 
             int node = stack.pop();
@@ -53,3 +55,4 @@ public class Main {
     }
 
 }
+
