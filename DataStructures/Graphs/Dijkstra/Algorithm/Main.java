@@ -77,7 +77,7 @@ public class Main {
 
         if (parent == idx) return;
 
-        if ((heap.get(parent).vertex > heap.get(idx).vertex) || (heap.get(parent).vertex == heap.get(idx).vertex && heap.get(parent).distance > heap.get(idx).distance)) {
+        if (heap.get(parent).distance > heap.get(idx).distance) {
             swap(parent, idx, heap);
             heapify(parent, heap);
         }
@@ -91,3 +91,4 @@ public class Main {
     }
 
 }
+
