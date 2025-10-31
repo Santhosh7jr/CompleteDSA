@@ -36,7 +36,7 @@ public class Main {
         return num;
     }
 
-    //Question3: finding the number which does not having its negative in the array but all the other numbers do.
+    //Question3: finding the number which does not having its negative in the array but all the other numbers does.
     public static int findNum2(int arr[]){
         int num=0;
         for (int i : arr) {
@@ -208,3 +208,4 @@ public class Main {
         return image;
     }
 }
+
