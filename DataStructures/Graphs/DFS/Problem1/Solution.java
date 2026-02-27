@@ -2,10 +2,7 @@ package DataStructures.Graphs.DFS.Problem1;
 
 import DataStructures.Graphs.Implementation.UndirectedGraph.inArrayForm.GraphArray;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 //https://www.geeksforgeeks.org/problems/number-of-provinces/1 <-- GFG
 class Solution {
