@@ -35,19 +35,19 @@ public class Main {
 
         if (idx >= coins.length) return 0;
 
-        if (dp[idx][sum] != 0) return dp[idx][sum];
-
         if (sum == sumSoFar) {
             return 1;
         }
 
         if (sumSoFar > sum) return 0;
 
+        if (dp[idx][sumSoFar] != 0) return dp[idx][sumSoFar];
+
         int count1 = findNumberOfWaysUsingMemoization(coins, sum, idx, sumSoFar + coins[idx], dp);
 
         int count2 = findNumberOfWaysUsingMemoization(coins, sum, idx + 1, sumSoFar, dp);
 
-        return dp[idx][sum] = count1 + count2;
+        return dp[idx][sumSoFar] = count1 + count2;
 
     }
 
@@ -73,3 +73,4 @@ public class Main {
     }
 
 }
+
