@@ -7,26 +7,47 @@ public class Main {
         int[] coins = {1, 2, 3};
         int sum = 5;
 
-        System.out.println(findNumberOfWaysUsingRecursion(coins, sum, 0, 0, new int[1]));
+        System.out.println(findNumberOfWaysUsingRecursion(coins, sum, 0, 0));
+        System.out.println(findNumberOfWaysUsingMemoization(coins, sum, 0, 0, new int[coins.length + 1][sum + 1]));
         System.out.println(findNumberOfWaysUsingTabulation(coins, sum));
 
     }
 
-    public static int findNumberOfWaysUsingRecursion(int[] coins, int sum, int idx, int sumSoFar, int[] result) {
+    public static int findNumberOfWaysUsingRecursion(int[] coins, int sum, int idx, int sumSoFar) {
 
-        if (idx >= coins.length) return result[0];
+        if (idx >= coins.length) return 0;
 
         if (sum == sumSoFar) {
-            return ++result[0];
+            return 1;
         }
 
-        if (sumSoFar > sum) return result[0];
+        if (sumSoFar > sum) return 0;
 
-        findNumberOfWaysUsingRecursion(coins, sum, idx, sumSoFar + coins[idx], result);
+        int count1 = findNumberOfWaysUsingRecursion(coins, sum, idx, sumSoFar + coins[idx]);
 
-        findNumberOfWaysUsingRecursion(coins, sum, idx + 1, sumSoFar, result);
+        int count2 = findNumberOfWaysUsingRecursion(coins, sum, idx + 1, sumSoFar);
 
-        return result[0];
+        return count1 + count2;
+
+    }
+
+    public static int findNumberOfWaysUsingMemoization(int[] coins, int sum, int idx, int sumSoFar, int[][] dp) {
+
+        if (idx >= coins.length) return 0;
+
+        if (dp[idx][sum] != 0) return dp[idx][sum];
+
+        if (sum == sumSoFar) {
+            return 1;
+        }
+
+        if (sumSoFar > sum) return 0;
+
+        int count1 = findNumberOfWaysUsingMemoization(coins, sum, idx, sumSoFar + coins[idx], dp);
+
+        int count2 = findNumberOfWaysUsingMemoization(coins, sum, idx + 1, sumSoFar, dp);
+
+        return dp[idx][sum] = count1 + count2;
 
     }
 
