@@ -3,7 +3,7 @@ import java.util.*;
 
 public class Main<T> {
 
-    ListNode<T> head=null;
+    public ListNode<T> head=null;
 
     public static void main(String[] args) throws Exception {
 

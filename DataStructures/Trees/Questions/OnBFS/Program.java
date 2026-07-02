@@ -2,8 +2,6 @@ package DataStructures.Trees.Questions.OnBFS;
 
 import DataStructures.Trees.BinarySearchTrees.TreeNode;
 import DataStructures.Trees.BinarySearchTrees.Main;
-import com.sun.source.tree.Tree;
-
 import java.util.*;
 
 public class Program extends Main{

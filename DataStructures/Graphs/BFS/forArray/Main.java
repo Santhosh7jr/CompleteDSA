@@ -28,6 +28,7 @@ public class Main {
         boolean visited[]=new boolean[graph.length];
         List<Integer> list=new ArrayList<>();
         Queue<Integer> queue=new LinkedList<>();
+        int count = 0;
 
         queue.offer(0);
 
@@ -39,6 +40,7 @@ public class Main {
 
                 visited[node]=true;
                 list.add(node);
+                count++;
 
                 for(int i=0;i<graph[node].length;i++){
 
@@ -50,6 +52,8 @@ public class Main {
 
                 }
             }
+
+            if (count == visited.length) return list;
 
         }
 

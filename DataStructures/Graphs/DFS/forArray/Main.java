@@ -7,7 +7,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        HashMap<Integer,List<Integer>> map=new HashMap<>();
+        HashMap<Integer, List<Integer>> map=new HashMap<>();
 
         map.put(0,new ArrayList<>(Arrays.asList(2,4)));
         map.put(1,new ArrayList<>(Arrays.asList(0,5)));
@@ -23,14 +23,14 @@ public class Main {
         System.out.println(dfs(0,graphArray.getGraph(),new ArrayList<>(),new boolean[6]));
     }
 
-    public static List<Integer> dfs(int node,boolean[][] graph,List<Integer> result,boolean[] visited){
+    public static List<Integer> dfs(int node, boolean[][] graph, List<Integer> result, boolean[] visited){
 
         result.add(node);
         visited[node]=true;
 
-        for(int neighbour=0;neighbour<graph[node].length;neighbour++){
+        for(int neighbour = 0; neighbour < graph[node].length; neighbour++){
             if(graph[node][neighbour] && !visited[neighbour]){
-                dfs(neighbour,graph,result,visited);
+                dfs(neighbour, graph, result, visited);
             }
         }
 

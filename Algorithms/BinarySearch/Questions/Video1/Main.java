@@ -133,7 +133,7 @@ public class Main {
     }
 
     //Q7: (LeetCode - 1095) Find in Mountain Array
-    public int findInMountainArray(int target, MountainArray mountainArr) {
+    /*public int findInMountainArray(int target, MountainArray mountainArr) {
         int peakIdx=getPeak(mountainArr);
 
         int result=AscBS(mountainArr,target,0,peakIdx);
@@ -181,7 +181,7 @@ public class Main {
         }
 
         return start;
-    }
+    }*/
 
     //Q8: (LeetCode - 33) Search in Rotated Sorted Array
     public static int search(int[] nums, int target) {
