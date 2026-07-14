@@ -1,34 +1,50 @@
-import java.util.* ;
-import java.io.*;
-public class Solution {
+import java.util. * ;
+import java.io. *;
 
+public class Solution {
     public static void main(String[] args) {
 
-        System.out.println(countStories(2, 1, 4));
+        System.out.println(isCyclicRotation(new long[] {1, 2, 3, 1}, new long[] {1, 1, 2, 3}, 4));
 
     }
 
-    public static int countStories(int x, int y, int z) {
+    public static boolean isCyclicRotation(long[] arr1, long[] arr2, int n) {
 
-        int storyCount = 0;
-        int storySum = 0;
+        long target = arr1[0];
+        List<Integer> list = new ArrayList<>();
 
-        while (z / y != 0) {
+        for (int i = 0; i < n; i++) {
+            if (arr2[i] == target) {
+                list.add(i);
+            }
+        }
 
-            if (z / y > 0) {
-                z -= y;
-                storySum++;
-                storyCount++;
+        for (int num : list) {
+
+            int idx = num;
+            int index = 0;
+            boolean flag = true;
+
+            for (int i = idx; i < n; i++) {
+                if (arr2[i] != arr1[index++]) {
+                    flag = false;
+                    break;
+                }
             }
 
-            if (storySum >= x) {
-                storyCount++;
-                storySum = 0;
+            for (int i = 0; i < idx; i++) {
+                if (arr2[i] != arr1[index++]) {
+                    flag = false;
+                    break;
+                }
             }
+
+            if (flag) return flag;
 
         }
 
-        return storyCount;
+        return false;
 
     }
+
 }
